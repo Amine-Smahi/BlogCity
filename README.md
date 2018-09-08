@@ -11,7 +11,7 @@ The goal is to create a secure multiuser platform for dynamic content. the user 
 * Update hes credentials
 * add/edit/delete posts
 * create a profile page
-* Whatch other users posts
+* Watch other users posts
 
 ## How to run the project
 The steps are very easy you only have to
@@ -32,7 +32,7 @@ The steps are very easy you only have to
 
 ## Screenshots
 
-![5b9438b9a50d3397534944](https://user-images.githubusercontent.com/24621701/45258642-d5f5b380-b3b2-11e8-8a55-26c718b32d6b.gif)
+![5b943e949e45d019435103](https://user-images.githubusercontent.com/24621701/45258785-55d14d00-b3b6-11e8-9d73-391436c1e022.gif)
 
 
 ## License
