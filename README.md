@@ -21,6 +21,11 @@ The steps are very easy you only have to
       user$ dotnet run
 * Support me by making a <img style="margin-bottom: -20px;" src="https://user-images.githubusercontent.com/24621701/44811262-193e6e00-abcc-11e8-8e61-e52d8c78d5c9.png" /> for the repo and thank you :D , If you want to contribute to the project and make it better, your help is very welcome. 
 
+## Screenshots
+
+![5b9438b9a50d3397534944](https://user-images.githubusercontent.com/24621701/45258642-d5f5b380-b3b2-11e8-8a55-26c718b32d6b.gif)
+
+
 ## License
 The project is under GNU GENERAL PUBLIC LICENSE 
 
