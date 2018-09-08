@@ -1,0 +1,58 @@
+@model BlogCity.Models.Post
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div class="row">
+
+        <div class="col-lg-2"></div>
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+          <!-- Title -->
+          <h1 class="mt-4">@Html.DisplayFor(model => model.Title)</h1>
+
+          <!-- Author -->
+          <p class="lead">
+            by
+            <a href="#">@Html.DisplayFor(model => model.Author)</a>
+          </p>
+
+          <hr>
+
+          <!-- Date/Time -->
+          <p>Posted on  @Html.DisplayFor(model => model.PublishedDate)</p>
+
+          <hr>
+
+          <!-- Preview Image -->
+          <img class="img-fluid rounded" src="@Model.Picture" alt="">
+
+          <hr>
+
+          <!-- Post Content -->
+          <p class="lead">@Html.DisplayFor(model => model.Text)</p>
+<br><br><br>
+            
+<div>
+    @if(User.Identity.Name != null){
+    if(User.Identity.Name == Model.Author){
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    }
+    }
+    <a asp-action="Index">Back to List</a>
+</div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
