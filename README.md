@@ -34,6 +34,8 @@ The steps are very easy you only have to
 
 <img src="https://user-images.githubusercontent.com/24621701/45258785-55d14d00-b3b6-11e8-9d73-391436c1e022.gif" height="700" />
 
+## Team
+proudly made by [Amine Smahi](https://github.com/Amine-Smahi) and support from [Jetlight Studio](http://jetlightstudio.tech/)
 
 ## License
 The project is under GNU GENERAL PUBLIC LICENSE 
