@@ -1,5 +1,5 @@
 ## BlogCity
-BlogCity a platform where words matter.It enables people to make an impression on others. To teach them something or connect emotionally. Where the quality of the idea matters
+BlogCity a platform where words matter. It enables people to make an impression on others. To teach them something or connect emotionally. Where the quality of the idea matters
 
 ## What is .NET Core
 .NET Core is a cross-platform, high-performance, open-source framework for building modern, cloud-based, Internet-connected applications.
@@ -12,6 +12,10 @@ The goal is to create a secure multiuser platform for dynamic content. the user 
 * add/edit/delete posts
 * create a profile page
 * Watch other users posts
+#### Todo
+* Add social media post sharing
+* Image upload instead of image url
+* Add comment system
 
 ## How to run the project
 The steps are very easy you only have to
