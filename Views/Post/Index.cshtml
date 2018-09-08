@@ -7,17 +7,17 @@
 <div class="row justify-content-md-center">
 
 @foreach (var item in Model) {
-
-              <!--  <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-              <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> -->
+    
                 <div class="col-md-8">
         <div class="card mb-4">
+             @if(item.Picture != null){
             <img class="card-img-top" src="@item.Picture" alt="Card image cap" height="300">
+             }
             <div class="card-body">
               <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2>
-              <p class="card-text"> @item.Text.Substring(0, 300) ...</p>
+              @if(item.Text.Length > 30){
+              <p class="card-text">@item.Text.Substring(0, 300) ...</p>
+              }
                 @if(User.Identity.Name != null){
                 @if(User.Identity.Name == @item.Author){
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit</a>
