@@ -32,7 +32,7 @@ The steps are very easy you only have to
 
 ## Screenshots
 
-![5b943e949e45d019435103](https://user-images.githubusercontent.com/24621701/45258785-55d14d00-b3b6-11e8-9d73-391436c1e022.gif)
+<img src="https://user-images.githubusercontent.com/24621701/45258785-55d14d00-b3b6-11e8-9d73-391436c1e022.gif" height="700" />
 
 
 ## License
