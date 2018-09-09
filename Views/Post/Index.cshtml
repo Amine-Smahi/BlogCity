@@ -1,52 +1,55 @@
 @model IEnumerable<BlogCity.Models.Post>
 
-@{
-    ViewData["Title"] = "Index";
-}
+  @{
+     ViewData["Title"] = "Index";
+  }
 
-<div class="row justify-content-md-center">
+  <div class="row justify-content-md-center">
 
-@foreach (var item in Model) {
-    
-           <div class="col-md-8">
-             <div class="card mb-4">
-                @if(item.Picture != null){
-                <img class="card-img-top" src="@item.Picture" alt="Card image cap" height="300">
-                }
-            <div class="card-body">
-              <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2>
-              @if(item.Text.Length > 30){
-              <p class="card-text">@item.Text.Substring(0, 300) ...</p>
-              }
-                @if(User.Identity.Name != null){
-                @if(User.Identity.Name == @item.Author){
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
-                   }
-                }
-              <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Read More →</a>
-            </div>
-            <div class="card-footer text-muted">
-              Posted on  @Html.DisplayFor(modelItem => item.PublishedDate) by
-              <a href="#">@Html.DisplayFor(modelItem => item.Author)</a>
-              <div style="float:right">
-               <a href="http://www.facebook.com/sharer.php?u=https://localhost:5001/Post/Details/@item.Id" target="_blank">
-                  <img src="https://simplesharebuttons.com/images/somacro/facebook.png" height="30" alt="Facebook" />
-              </a>
-              
-              <!-- Google+ -->
-              <a href="https://plus.google.com/share?url=https://localhost:5001/Post/Details/@item.Id" target="_blank">
-                  <img src="https://simplesharebuttons.com/images/somacro/google.png" height="30" alt="Google" />
-              </a>
-              
-              <!-- LinkedIn -->
-              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://localhost:5001/Post/Details/@item.Id" target="_blank">
-                  <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" height="30" alt="LinkedIn" />
-             </a>
-              </div>
-            </div>
+    @foreach (var item in Model) {
+
+    <div class="col-md-8">
+      <div class="card mb-4">
+        @if(item.Picture != null){
+        <img class="card-img-top" src="@item.Picture" alt="Card image cap" height="300">
+        }
+        <div class="card-body">
+          <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2>
+          @if(item.Text.Length > 30){
+          <p class="card-text">@item.Text.Substring(0, 300) ...</p>
+          }
+          @if(User.Identity.Name != null){
+          @if(User.Identity.Name == @item.Author){
+          <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit</a>
+          <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+          }
+          }
+          <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Read More →</a>
+        </div>
+        <div class="card-footer text-muted">
+          Posted on @Html.DisplayFor(modelItem => item.PublishedDate) by
+          <a href="#">@Html.DisplayFor(modelItem => item.Author)</a>
+          <div style="float:right">
+            <a href="http://www.facebook.com/sharer.php?u=https://localhost:5001/Post/Details/@item.Id" target="_blank">
+              <img src="https://simplesharebuttons.com/images/somacro/facebook.png" height="30" alt="Facebook" />
+            </a>
+
+            <!-- Google+ -->
+            <a href="https://plus.google.com/share?url=https://localhost:5001/Post/Details/@item.Id" target="_blank">
+              <img src="https://simplesharebuttons.com/images/somacro/google.png" height="30" alt="Google" />
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://localhost:5001/Post/Details/@item.Id"
+              target="_blank">
+              <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" height="30" alt="LinkedIn" />
+            </a>
           </div>
-          </div>
-}
-</div>
-<a href="/Post/Create/"><div class="fab"> + </div></a>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  <a href="/Post/Create/">
+    <div class="fab"> + </div>
+  </a>
