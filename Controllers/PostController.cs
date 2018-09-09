@@ -54,7 +54,11 @@ namespace BlogCity.Controllers
         // GET: Post/Create
         public IActionResult Create()
         {
-            return View();
+             if (User.Identity.IsAuthenticated) {
+                 return View();
+             } else {
+                 return Redirect ("/Identity/Account/Login");
+            }
         }
 
         // POST: Post/Create
