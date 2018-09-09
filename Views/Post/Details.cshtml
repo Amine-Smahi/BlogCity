@@ -35,6 +35,22 @@
 
           <!-- Post Content -->
           <p class="lead">@Html.DisplayFor(model => model.Text)</p>
+          <br><br>
+          <center>
+          <a href="http://www.facebook.com/sharer.php?u=https://localhost:5001/Post/Details/@Model.Id" target="_blank">
+                  <img src="https://simplesharebuttons.com/images/somacro/facebook.png" height="50" alt="Facebook" />
+              </a>
+              
+              <!-- Google+ -->
+              <a href="https://plus.google.com/share?url=https://localhost:5001/Post/Details/@Model.Id" target="_blank">
+                  <img src="https://simplesharebuttons.com/images/somacro/google.png" height="50" alt="Google" />
+              </a>
+              
+              <!-- LinkedIn -->
+              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://localhost:5001/Post/Details/@Model.Id" target="_blank">
+                  <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" height="50" alt="LinkedIn" />
+             </a>
+             </center>
 <br><br><br>
             
 <div>

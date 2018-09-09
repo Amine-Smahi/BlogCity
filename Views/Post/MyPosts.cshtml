@@ -29,6 +29,21 @@
             <div class="card-footer text-muted">
               Posted on  @Html.DisplayFor(modelItem => item.PublishedDate) by
               <a href="#">@Html.DisplayFor(modelItem => item.Author)</a>
+                <div style="float:right">
+               <a href="http://www.facebook.com/sharer.php?u=https://localhost:5001/Post/Details/@item.Id" target="_blank">
+                  <img src="https://simplesharebuttons.com/images/somacro/facebook.png" height="30" alt="Facebook" />
+              </a>
+              
+              <!-- Google+ -->
+              <a href="https://plus.google.com/share?url=https://localhost:5001/Post/Details/@item.Id" target="_blank">
+                  <img src="https://simplesharebuttons.com/images/somacro/google.png" height="30" alt="Google" />
+              </a>
+              
+              <!-- LinkedIn -->
+              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://localhost:5001/Post/Details/@item.Id" target="_blank">
+                  <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" height="30" alt="LinkedIn" />
+             </a>
+              </div>
             </div>
           </div>
           </div>
