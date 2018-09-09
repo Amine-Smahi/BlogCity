@@ -1,19 +1,17 @@
 <ul class="navbar-nav">
     @if (User.Identity.IsAuthenticated)
     {
-    <li class="nav-item">
-        <a id="MyPosts" class="nav-link text-white" href="/Post/MyPosts/" title="MyPosts">My Post</a>
-    </li>
-    <li class="nav-item">
-        <a id="manage" class="nav-link text-white" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello
-            @User.Identity.Name!</a>
-    </li>
-    <li class="nav-item">
-        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index",
+    <div class="dropdown">
+       <button class="dropdown-toggle btn btn-drop" data-toggle="dropdown"><i class="fa fa-user-circle icon-account"></i></button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" asp-page="/Post/MyPosts/">My Posts</a>
+            <a class="dropdown-item" asp-page="/Account/Manage/Index">Profile</a>
+            <form  id="logoutForm" class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index",
             new { area="" })">
-            <button id="logout" type="submit" class="nav-link btn btn-link text-white">Logout</button>
-        </form>
-    </li>
+            <button  id="logout" type="submit" class="nav-link btn btn-link btn-logout">Logout</button>
+            </form>
+        </div>
+    </div>
     }
     else
     {

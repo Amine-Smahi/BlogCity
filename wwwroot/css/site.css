@@ -1,29 +1,34 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
-.nav-item a{
+
+.nav-item a {
   color: #fff !important;
 }
-footer a:link{
+
+footer a:link {
   color: #fff !important;
 }
-.bg-blue{
-  background-color:  #029e74 !important;
+
+.bg-blue {
+  background-color: #029e74 !important;
 }
-.btn-default{
-  background-color:  #029e74 !important;
+
+.btn-default {
+  background-color: #029e74 !important;
   color: #fff;
 }
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -33,6 +38,7 @@ html {
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -57,6 +63,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -66,8 +73,10 @@ body {
   white-space: nowrap;
   /* Set the fixed height of the footer here */
   height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px;
+  /* Vertically center the text there */
 }
+
 .fab {
   width: 70px;
   height: 70px;
@@ -75,12 +84,10 @@ body {
   border-radius: 50%;
   box-shadow: 0 6px 10px 0 #666;
   transition: all 0.1s ease-in-out;
-
   font-size: 43px;
   color: white;
   text-align: center;
   padding: 0px;
-
   position: fixed;
   right: 50px;
   bottom: 80px;
@@ -89,4 +96,23 @@ body {
 .fab:hover {
   box-shadow: 0 6px 14px 0 #666;
   transform: scale(1.05);
+}
+
+.btn-logout {
+  color: #000 !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.btn-drop {
+  background-color: #029E74;
+  color: #fff !important;
+  border: 0px !important;
+  padding: 0px !important;
+}
+
+.icon-account {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 5px;
 }
