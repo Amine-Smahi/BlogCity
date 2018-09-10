@@ -82,15 +82,16 @@ body {
   height: 70px;
   background-color: #F44336;
   border-radius: 50%;
-  box-shadow: 0 6px 10px 0 #666;
+  border: 2px solid white;
   transition: all 0.1s ease-in-out;
   font-size: 43px;
   color: white;
   text-align: center;
   padding: 0px;
   position: fixed;
-  right: 50px;
-  bottom: 80px;
+  right: 3%;
+  bottom: 3%;
+  z-index: 99999;
 }
 
 .fab:hover {
@@ -101,17 +102,18 @@ body {
 .fab2 {
   width: 70px;
   height: 70px;
-  background-color: #0E7FBB;
+  background-color: #326897;
   border-radius: 50%;
-  box-shadow: 0 6px 10px 0 #666;
+  border: 2px solid white;
   transition: all 0.1s ease-in-out;
-  font-size: 43px;
+  font-size: 42px;
   color: white;
   text-align: center;
   padding: 0px;
   position: fixed;
-  right: 50px;
-  bottom: 80px;
+  right: 3%;
+  bottom: 3%;
+  z-index: 999999;
 }
 
 .fab2:hover {
