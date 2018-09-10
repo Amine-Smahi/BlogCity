@@ -15,12 +15,12 @@ The goal is to create a secure multiuser platform for dynamic content. the user 
 * Share posts on social media
 * Social media authentication
 * Like(love) posts
+* Search for posts
 
 ### Todo
 * Image upload instead of image url
 * Add comment system
 * Add markdown 
-* Add search for posts function
 
 ## How to run the project
 The steps are very easy you only have to
