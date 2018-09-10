@@ -34,6 +34,18 @@ namespace BlogCity.Controllers {
             });
             return tcs.Task;
         }
+
+        [HttpGet ("{Title}")]
+        public async Task<IActionResult> Index (string Title) {
+            Console.WriteLine ("\n\n" + Title + "\n\n");
+            if (Title == "") {
+                return View (await _context.Posts.OrderByDescending (d => d.Id).ToListAsync ());
+            } else {
+                return View (await _context.Posts.Where (a => a.Title.Contains (Title)).OrderByDescending (d => d.Id).ToListAsync ());
+            }
+
+        }
+
         public async Task<IActionResult> MyPosts () {
             return View (await _context.Posts.Where (a => a.Author == User.Identity.Name).OrderByDescending (d => d.Id).ToListAsync ());
         }

@@ -80,7 +80,7 @@ body {
 .fab {
   width: 70px;
   height: 70px;
-  background-color: red;
+  background-color: #F44336;
   border-radius: 50%;
   box-shadow: 0 6px 10px 0 #666;
   transition: all 0.1s ease-in-out;
@@ -139,5 +139,13 @@ body {
 }
 
 .icon-heart {
-  color: #ff0000;
+  color: #F44336;
+}
+
+.search {
+  border-radius: 15px;
+  padding-left: 2%;
+  height: 35px;
+  margin-right: 10px;
+  border: 0px;
 }

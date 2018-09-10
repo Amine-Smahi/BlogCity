@@ -1,4 +1,8 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿document.querySelector('#txtSearch').addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) { // 13 is enter
+        console.log("called");
+        var searchText = document.querySelector('#txtSearch').value;
+        window.location.replace("https://localhost:5001/" + searchText);
+    }
+});
