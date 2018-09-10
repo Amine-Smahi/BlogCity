@@ -48,9 +48,9 @@
         </div>
     </div>
 </div>
-
-<button onclick="love(@Model.Id)" class="fab"> <i class="fa fa-heart"></i> </button>
-
+    @if (User.Identity.IsAuthenticated)
+    {
+    <button onclick="love(@Model.Id)" class="fab"> <i class="fa fa-heart"></i> </button>
 <script>
     function love(id) {
         $.ajax({
@@ -66,3 +66,4 @@
         document.getElementById("lovecount").innerHTML = n;
     }
 </script>
+    }
