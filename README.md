@@ -13,13 +13,12 @@ The goal is to create a secure multiuser platform for dynamic content. the user 
 * create a profile page
 * Watch other users posts
 * Share posts on social media
-
+* Social media authentication
 ### Todo
 * Image upload instead of image url
 * Add comment system
 * Add markdown 
 * Add likes/claps 
-* Add social media login
 
 ## How to run the project
 The steps are very easy you only have to
