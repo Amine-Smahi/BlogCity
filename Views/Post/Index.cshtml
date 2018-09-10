@@ -25,6 +25,10 @@
           }
           }
           <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Read More →</a>
+          <div style="float:right;padding-top:15px;font-weight:bold;">
+                <i class="fa fa-heart icon-heart"></i>
+                <span id="lovecount">@item.LoveCount</span>
+            </div>
         </div>
         <div class="card-footer text-muted">
           Posted on @Html.DisplayFor(modelItem => item.PublishedDate) by
@@ -51,5 +55,5 @@
     }
   </div>
   <a href="/Post/Create/">
-    <div class="fab"> + </div>
+    <div class="fab2"> + </div>
   </a>

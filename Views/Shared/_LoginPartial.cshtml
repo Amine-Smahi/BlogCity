@@ -4,8 +4,8 @@
     <div class="dropdown">
        <button class="dropdown-toggle btn btn-drop" data-toggle="dropdown"><i class="fa fa-user-circle icon-account"></i></button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" asp-page="/Post/MyPosts/">My Posts</a>
-            <a class="dropdown-item" asp-page="/Account/Manage/Index">Profile</a>
+            <a class="dropdown-item" href="/Post/MyPosts/">My Posts</a>
+            <a class="dropdown-item" href="/Account/Manage/Index">Profile</a>
             <form  id="logoutForm" class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index",new { area="" })">
             <button  id="logout" type="submit" class="nav-link btn btn-link btn-logout">Logout</button>
             </form>

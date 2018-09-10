@@ -98,6 +98,27 @@ body {
   transform: scale(1.05);
 }
 
+.fab2 {
+  width: 70px;
+  height: 70px;
+  background-color: #0E7FBB;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px 0 #666;
+  transition: all 0.1s ease-in-out;
+  font-size: 43px;
+  color: white;
+  text-align: center;
+  padding: 0px;
+  position: fixed;
+  right: 50px;
+  bottom: 80px;
+}
+
+.fab2:hover {
+  box-shadow: 0 6px 14px 0 #666;
+  transform: scale(1.05);
+}
+
 .btn-logout {
   color: #000 !important;
   margin: 0px !important;
@@ -115,4 +136,8 @@ body {
   font-size: 30px;
   color: #fff;
   margin-top: 5px;
+}
+
+.icon-heart {
+  color: #ff0000;
 }

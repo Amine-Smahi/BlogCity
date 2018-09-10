@@ -12,6 +12,10 @@
         <p class="lead">
             by
             <a href="#">@Html.DisplayFor(model => model.Author)</a>
+            <div style="float:right;padding-top:15px;font-weight:bold;">
+                <i class="fa fa-heart icon-heart"></i>
+                <span id="lovecount">@Model.LoveCount</span>
+            </div>
         </p>
         <hr>
         <p>Posted on @Html.DisplayFor(model => model.PublishedDate)</p>
@@ -37,10 +41,28 @@
         <div>
             @if(User.Identity.Name != null){
             if(User.Identity.Name == Model.Author){
-                  <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-               }
+            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+            }
             }
             <a asp-action="Index">Back to List</a>
         </div>
     </div>
 </div>
+
+<button onclick="love(@Model.Id)" class="fab"> <i class="fa fa-heart"></i> </button>
+
+<script>
+    function love(id) {
+        $.ajax({
+            type: "POST",
+            url: "/Post/Count/" + id,
+            data: {},
+            success: function (result) {},
+            error: function (req, status, error) {}
+
+        });
+        var n = document.getElementById("lovecount").innerHTML;
+        n++;
+        document.getElementById("lovecount").innerHTML = n;
+    }
+</script>
