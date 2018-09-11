@@ -7,15 +7,17 @@ BlogCity a platform where words matter. It enables people to make an impression 
 ## Features
 The goal is to create a secure multiuser platform for dynamic content. the user can
 * Create an account
-* login to hes account
+* Login to own account
 * Update hes credentials
-* add/edit/delete posts
-* create a profile page
+* Add/edit/delete posts
+* Create a profile page
 * Watch other users posts
 * Share posts on social media
 * Social media authentication
 * Like(love) posts
 * Search for posts
+* Download personnal data
+* Two factor authentication
 
 ### Todo
 * Image upload instead of image url
@@ -34,6 +36,11 @@ The steps are very easy you only have to
 * Apply migrations
 
       user$ dotnet ef database update
+* Update Facebook app details
+
+      user$ dotnet user-secrets set Authentication:Facebook:AppId <app-id>
+      user$ dotnet user-secrets set Authentication:Facebook:AppSecret <app-secret>
+
 * Finnaly go and run the app by typing
 
       user$ dotnet run
