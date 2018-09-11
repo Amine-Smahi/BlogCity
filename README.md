@@ -46,9 +46,10 @@ The steps are very easy you only have to
       user$ dotnet run
 * Support me by making a <img style="margin-bottom: -20px;" src="https://user-images.githubusercontent.com/24621701/44811262-193e6e00-abcc-11e8-8e61-e52d8c78d5c9.png" /> for the repo and thank you :D , If you want to contribute to the project and make it better, your help is very welcome. 
 
-## Screenshots
+## Screenshot
 
-<img src="https://user-images.githubusercontent.com/24621701/45258785-55d14d00-b3b6-11e8-9d73-391436c1e022.gif" height="700" />
+![blogcity](https://user-images.githubusercontent.com/24621701/45369008-cf4a8480-b5dc-11e8-89cc-5d78b2e3ec5e.png)
+If you want to see more screenshots checkout [Screenshots](https://github.com/Amine-Smahi/BlogCity/blob/master/Screenshot.md)
 
 ## Team
 proudly made by [Amine Smahi](https://github.com/Amine-Smahi) and support from [Jetlight Studio](http://jetlightstudio.tech/)
