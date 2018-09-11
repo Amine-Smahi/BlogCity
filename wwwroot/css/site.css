@@ -4,11 +4,10 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-}
-
-.nav-item a {
   color: #fff !important;
 }
+
+
 
 footer a:link {
   color: #fff !important;
