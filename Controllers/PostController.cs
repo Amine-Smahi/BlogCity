@@ -108,11 +108,10 @@ namespace BlogCity.Controllers {
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit (int id, [Bind ("Id,Title,Text,PublishedDate,Author")] Post post) {
+        public async Task<IActionResult> Edit (int id, [Bind ("Id,Title,Picture,Text,PublishedDate,Author,LoveCount")] Post post) {
             if (id != post.Id) {
                 return NotFound ();
             }
-
             if (ModelState.IsValid) {
                 try {
                     _context.Update (post);

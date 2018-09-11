@@ -23,6 +23,13 @@
         <img class="img-fluid rounded" src="@Model.Picture" alt="">
         <hr>
         <p class="lead">@Html.DisplayFor(model => model.Text)</p>
+        <br>
+          @if(User.Identity.Name != null){
+            if(User.Identity.Name == Model.Author){
+            <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+            }
+            }
+            <a class="btn btn-default" asp-action="Index">Back to List</a>
         <br><br>
         <center>
             <a href="http://www.facebook.com/sharer.php?u=https://localhost:5001/Post/Details/@Model.Id" target="_blank">
@@ -37,15 +44,6 @@
             </a>
         </center>
         <br><br><br>
-
-        <div>
-            @if(User.Identity.Name != null){
-            if(User.Identity.Name == Model.Author){
-            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
-            }
-            }
-            <a asp-action="Index">Back to List</a>
-        </div>
     </div>
 </div>
     @if (User.Identity.IsAuthenticated)
