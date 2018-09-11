@@ -48,7 +48,7 @@ The steps are very easy you only have to
 
 ## Screenshot
 
-![blogcity](https://user-images.githubusercontent.com/24621701/45369198-3ff1a100-b5dd-11e8-896e-17a61b8451ab.png)
+![blogcity2](https://user-images.githubusercontent.com/24621701/45369605-3452aa00-b5de-11e8-84a4-770451c0a6fa.png)
 
 If you want to see more screenshots checkout [Screenshots](https://github.com/Amine-Smahi/BlogCity/blob/master/Screenshot.md)
 
