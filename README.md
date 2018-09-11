@@ -16,6 +16,8 @@ The goal is to create a secure multiuser platform for dynamic content. the user 
 * Social media authentication
 * Like(love) posts
 * Search for posts
+* Download personnal data
+* Two factor authentication
 
 ### Todo
 * Image upload instead of image url
