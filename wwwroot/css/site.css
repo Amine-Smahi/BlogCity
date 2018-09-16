@@ -150,3 +150,14 @@ body {
   margin-right: 10px;
   border: 0px;
 }
+
+.form-btn {
+  display: inline-block;
+}
+
+.form-btn input {
+  color: #fff !important;
+  background-color: #DC3545;
+  padding: 7px;
+  border-radius: 3px;
+}
