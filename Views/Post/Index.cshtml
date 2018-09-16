@@ -16,7 +16,7 @@
         <div class="card-body">
           <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2>
           @if(item.Text.Length > 30){
-          <p class="card-text">@item.Text.Substring(0, 300) ...</p>
+          <p class="card-text">@Html.Raw(@item.Text.Substring(0, 250)) ...</p>
           }
           @if(User.Identity.Name != null){
           @if(User.Identity.Name == @item.Author){

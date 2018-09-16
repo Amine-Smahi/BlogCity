@@ -22,7 +22,7 @@
         <hr>
         <img class="img-fluid rounded" src="@Model.Picture" alt="">
         <hr>
-        <p class="lead">@Html.DisplayFor(model => model.Text)</p>
+          <p class="lead">@Html.Raw(@Model.Text)</p>
         <br>
           @if(User.Identity.Name != null){
             if(User.Identity.Name == Model.Author){
