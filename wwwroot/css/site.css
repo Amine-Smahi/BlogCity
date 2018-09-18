@@ -161,3 +161,10 @@ body {
   padding: 7px;
   border-radius: 3px;
 }
+
+.form-btn input:hover {
+  color: #fff !important;
+  background-color: #9B202A;
+  padding: 7px;
+  border-radius: 3px;
+}
