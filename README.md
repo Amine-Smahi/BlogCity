@@ -20,7 +20,6 @@ The goal is to create a secure multiuser platform for dynamic content. the user 
 * Two factor authentication
 
 ### Todo
-* Image upload instead of image url
 * Add comment system
 * Add markdown 
 
