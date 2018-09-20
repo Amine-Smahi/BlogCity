@@ -25,10 +25,10 @@ The goal is to create a secure multiuser platform for dynamic content. the user 
 
 ## How to run the project
 The steps are very easy you only have to
-* Check if .NET Core sdk version 2.2 preview1 installed on your system, you can download it from [Here](https://www.microsoft.com/net/download/dotnet-core/2.2) then check if the instalation has gone correctly by typing
+* Check if .NET Core sdk version 2.2 preview2 installed on your system, you can download it from [Here](https://www.microsoft.com/net/download/dotnet-core/2.2) then check if the instalation has gone correctly by typing
       
       user$ dotnet --version
-      user$ 2.2.100-preview1
+      user$ 2.2.100-preview2-009404
 * Restore the dependencies by typing the commande
   
       user$ dotnet restore
