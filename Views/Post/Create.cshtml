@@ -9,12 +9,11 @@
 <hr />
 <div class="row justify-content-md-center">
     <div class="col-md-8">
-        <form asp-action="Create">
+        <form asp-action="Create" asp-antiforgery="false"  enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
               <div class="form-group">
-                <label asp-for="Picture" class="control-label"></label>
-                <input asp-for="Picture" class="form-control" />
-                <span asp-validation-for="Picture" class="text-danger"></span>
+                <label class="control-label">Picture</label>
+                <input onchange="ValidateSize(this)" id="myfile" name="file" type="file" accept="image/*">
             </div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
@@ -41,3 +40,15 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");
 }
 }
+<script>
+function ValidateSize(file) {
+    var fileVal=document.getElementById("myfile").value;
+    if(fileVal != ""){
+        var FileSize = file.files[0].size / 1024 / 1024; // in MB
+        if (FileSize > 1) {
+            alert('File size exceeds 1 MB');
+            document.getElementById("myfile").value ="";
+        }
+      }
+    }
+</script>

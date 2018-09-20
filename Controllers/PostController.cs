@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BlogCity.Data;
 using BlogCity.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -14,9 +15,11 @@ using Microsoft.EntityFrameworkCore;
 namespace BlogCity.Controllers {
     public class PostController : Controller {
         private readonly ApplicationDbContext _context;
+        private IHostingEnvironment _hostingEnvironment;
 
-        public PostController (ApplicationDbContext context) {
+        public PostController (ApplicationDbContext context, IHostingEnvironment env) {
             _context = context;
+            _hostingEnvironment = env;
         }
 
         // GET: Post
@@ -78,11 +81,17 @@ namespace BlogCity.Controllers {
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create ([Bind ("Id,Picture,Title,Text")] Post post) {
+        public async Task<IActionResult> Create ([Bind ("Id,Title,Text")] Post post, IFormFile file) {
             if (ModelState.IsValid) {
+                var uploads = Path.Combine (_hostingEnvironment.WebRootPath, "uploads");
+                if (file.Length > 0) {
+                    using (var fileStream = new FileStream (Path.Combine (uploads, file.FileName), FileMode.Create)) {
+                        await file.CopyToAsync (fileStream);
+                    }
+                }
                 post.PublishedDate = DateTime.Now;
                 post.Author = User.Identity.Name;
+                post.Picture = Path.Combine ("https://localhost:5001/uploads/", file.FileName);
                 _context.Add (post);
                 await _context.SaveChangesAsync ();
                 return RedirectToAction (nameof (Index));
